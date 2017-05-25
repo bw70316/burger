@@ -1,0 +1,36 @@
+<h1>Welcome to Whimpy's Burgers</h1>
+
+<h2>"I'll glad pay you Tuesday for a hamburger today"</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#unless this.devoured}}
+      <li class ="list-group-item">
+        {{this.id}} {{this.burger_name}}
+      </li>
+
+        <form action="/{{this.id}}?_method=PUT" method="POST">
+          <input type="hidden" name="devoured" value="false">
+          <button type="submit">DEVOUR IT</button>
+        </form>
+
+      
+   
+    {{/unless}}
+  {{/each}}
+</ul>
+
+
+
+
+<h2>Add a Burger to the Menu</h2>
+<form class="create-update-form" action="/" method="POST">
+
+  <textarea class="form-control" name="burger_name" rows="6" cols="50">
+
+  </textarea>
+
+  <button type="submit">Add Burger</button>
+</form>
+
+
