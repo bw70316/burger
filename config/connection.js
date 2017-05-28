@@ -13,6 +13,8 @@ if (process.env.JAWSDB_URL) {
 });
 };
 
+//connects to my jawsdb and mysql db
+
 
 connection.connect(function(err) {
   if (err) {
@@ -22,6 +24,6 @@ connection.connect(function(err) {
   console.log("connected as id " + connection.threadId);
 });
 
-
+//throws error if there is an error, otherwise says connects to 
 
 module.exports = connection;
