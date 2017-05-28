@@ -20,6 +20,6 @@ var burger = {
   }
 };
 // objColVals mean the values of the burger and whether or not its been devoured
-//condition refers to the id of the burger, or the button being clicked. 
+//condition refers to the id of the burger or the button being clicked. 
 // Export the database functions for the controller (burgersController.js).
 module.exports = burger;

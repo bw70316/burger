@@ -8,7 +8,7 @@ var port = process.env.PORT || 3000; //connects to port
 
 var app = express();
 
-// Serve static content for the app from the "public" directory in the application directory.
+// imports my files from my public folder (css)
 app.use(express.static(process.cwd() + "/public"));
 
 app.use(bodyParser.urlencoded({ extended: false }));

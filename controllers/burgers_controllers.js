@@ -6,6 +6,7 @@ var router = express.Router();
 var burger = require("../models/burger.js");
 
 // Create all our routes and set up logic within those routes where required.
+//Each route works with the ORM.js to perform the specific functions. 
 router.get("/", function(req, res) {
   burger.selectAll(function(data) {
     var hbsObject = {
@@ -37,7 +38,7 @@ router.put("/:id", function(req, res) {
     res.redirect("/");
   });
 });
-
+//when a burger is devoured, the page updates to display the burger matched with the id
 
 // Export routes for server.js to use.
 module.exports = router;
